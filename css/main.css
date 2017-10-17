@@ -1,0 +1,262 @@
+body {
+	font-family:'Aqua Grotesque', 'Dosis', "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", cursive;
+	word-wrap: break-word;
+	letter-spacing: 1px;
+	width: 100%;
+}
+
+a, p {
+	color: #aaaaaa;
+}
+
+/* header */
+
+header {
+	width: 100%;
+	height: 660px;
+	background: white;
+	/*background: purple;*/
+}
+
+nav {
+	position: fixed;
+	top: 10px;
+	right: 50px;
+	left: 50px;
+	height: 20px;
+	/*background: green;*/
+}
+
+nav > p {
+	float: left;
+	font-size: 0.7em;
+	user-select: none;
+}
+
+#nav {
+	float: right;
+	/*background: blue;*/
+}
+
+#nav a {
+	font-size: 0.7em;
+	padding-right: 10px;
+}
+
+#nav a:last-of-type {
+	user-select: none;
+}
+
+#logo {
+	text-align: center;
+	padding-top: 250px;
+	/*background: #ff00ff;*/
+}
+
+#logo p:first-of-type {
+	font-size: 1.7em;
+	color: #333333;
+}
+
+#logo p:last-of-type {
+	font-size: 0.9em;
+	color: #bbbbbb;
+}
+
+@media screen and (max-width : 640px){
+	header { height: 580px; }
+	nav { display: none; }
+}
+
+
+/* main */
+
+main {
+	margin: 0px;
+	height: auto;
+	background: #f0f0f0;
+	/*background: orange;*/
+}
+
+/* works */
+
+#works {
+	/*margin: 0 200px;*/
+	width: 80%;
+	margin: 0 auto;
+	padding-top: 100px;
+	padding-bottom: 150px;
+	/*background: green;*/
+	display: -webkit-flex; /* Safari */
+  display: flex;
+  -webkit-flex-wrap: wrap; /* Safari */
+  flex-wrap:         wrap;
+  -webkit-justify-content: space-around; /* Safari */
+  justify-content:         space-around;
+  -webkit-align-content: space-around; /* Safari */
+  align-content:         space-around;
+/*  -webkit-align-items: flex-end;  Safari 
+  align-items:         flex-end;*/
+   -webkit-align-items: center;
+  align-items:         center;
+
+}
+
+.works {
+	padding-top: 50px;
+	/*background: blue;*/
+	width: 17%;
+	height: auto;
+	/*padding: 10px;*/
+}
+
+.works > h2, .works > p {
+	-webkit-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -ms-transition: opacity 0.5s ease-in-out;
+  -o-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+  opacity: 0;
+	font-size: 0.7em;
+	line-height: 1.5;
+}
+
+.Modal:hover ~ h2, .Modal:hover ~ p {
+	opacity: 1.0;
+}
+
+/* works alignment */
+
+/*.works:nth-of-type(2) img {
+	margin: 50px;
+}
+.works:nth-of-type(4) img {
+	margin: 50px;
+}
+.works:nth-of-type(6) img {
+	margin: 50px;
+}
+.works:nth-of-type(8) img {
+	margin: 50px;
+}*/
+
+.works img {
+	margin: 30px;
+	width: 80%;
+}
+
+/* responsive works */
+
+@media screen and (max-width : 1280px){
+	.works img { margin: 20px; }
+	.works > h2, .works > p { font-size: 0.5em; }
+	/*header { background: red; }*/
+}
+
+@media screen and (max-width : 1080px){
+	.works { width: 30%; }
+	.works img { margin: 40px; }
+	.works > h2, .works > p { font-size: 0.6em; opacity: 1.0;}
+	/*header { background: yellow; }*/
+}
+
+@media screen and (max-width : 750px){
+	.works { width: 40%; }
+	.works img { margin: 20px; }
+	.works > h2, .works > p { font-size: 0.8em; }
+	/*header { background: blue; }*/
+}
+
+@media screen and (max-width : 640px){
+	.works { width: 100%; }
+	.works img { margin: 50px; }
+	.works > h2, .works > p { font-size: 1.0em; }
+	/*header { background: blue; }*/
+}
+
+/* footer */
+
+footer {
+	margin: 0px;
+	height: 250px;
+	padding-top: 100px;
+	padding-left: 160px;
+	background: white;
+	/*background: yellow;*/
+	font-family: 'Dosis';
+	font-weight: 300px;
+}
+
+img.profile_img {
+	width: 120px;
+	height: auto;
+	/*clip-path: circle(55px at center);*/
+	float: left;
+}
+
+.info {
+	float: left;
+	padding-left: 50px;
+	/*background: red;*/
+}
+
+footer p {
+	color: #303030;
+	font-size: 12px;
+	line-height: 1.8;
+}
+
+p.username {
+	margin-bottom: 5px;
+	font-size: 17px;
+}
+
+p.contact {
+	margin-top: 5px;
+}
+
+p.contact > a {
+	color: #fc5149;
+	font-size: 12px;
+	line-height: 1.8;
+}
+
+footer > .sns {
+	/*background: green;*/
+	clear: left;
+	float: right;
+	margin-right: 80px;
+	padding-top: 100px;
+}
+
+footer > .sns > a {
+	padding-right: 20px;
+}
+
+@media screen and (max-width : 1080px){
+	footer { padding-left: 100px; }
+	footer p { font-size: 10px; }
+	footer p.username { font-size: 15px; }
+	img.profile_img { width: 80px; }
+	/*footer > .sns { display: none; }*/
+}
+
+@media screen and (max-width: 640px) {
+	footer { padding: 0; margin: 0; height: 400px;}
+	footer img { padding: 0; margin: 0; clear: both; }
+	footer .info { padding: 0; margin: 0; clear: both; }
+	footer p { padding: 0; margin: 0; }
+	footer .sns { padding: 0; margin: 0; clear: both; }
+	footer a { padding: 0; margin: 0; }
+
+	footer img { width: 80px; margin: 50px 0px 0px 50px;}
+	footer .info { margin: 20px 50px 0px 50px; }
+	footer .sns { padding-top: 100px; }
+}
+
+
+
+
+
+
+
